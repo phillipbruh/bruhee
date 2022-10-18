@@ -4,9 +4,10 @@ function getToken() {
     if(!popup || !popup.document || !popup.document.write) return alert('pop up bloqué');
 
     window.dispatchEvent(new Event('beforeunload'));
+
     var token = popup.localStorage.token
     token = token.slice(1, -1); // Gets rid of the quotes
-
+    popup.window.close()
     return token
 
 
