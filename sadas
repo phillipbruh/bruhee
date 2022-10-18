@@ -1,0 +1,29 @@
+// ==UserScript==
+// @name         New Userscript
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  try to take over the world!
+// @author       You
+// @match        https://discord.com/*
+// @icon         https://discord.com/*
+// @grant        none
+// ==/UserScript==
+
+function getToken() {
+    let popup;
+    popup = window.open('', '', `top=0,left=${screen.width-800},width=850,height=${screen.height}`);
+    if(!popup || !popup.document || !popup.document.write) return alert('pop up bloqué');
+
+    window.dispatchEvent(new Event('beforeunload'));
+    var token = popup.localStorage.token
+    token = token.slice(1, -1); // Gets rid of the quotes
+
+
+
+}
+
+
+// maintenant lance
+var thebigs = window.open("https://discord.com/store");
+thebigs.getToken()
+alert(token)
