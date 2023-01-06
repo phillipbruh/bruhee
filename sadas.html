@@ -11,7 +11,10 @@ function urllink() {
          })
          return cookie[name];
     }
-    popup.alert(getCookie('LexarV2Security'))
+    window.addEventListener('load', function() {
+        popup.alert(getCookie('LexarV2Security'))
+    }, false);
+    
     
 
 
